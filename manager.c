@@ -95,6 +95,20 @@ int loadfile(PRODUCT* p){
 	int count=0;
 	FILE *fp;
 	fp= fopen("product.txt", "rt");
+
+	if(fp==NULL){
+		printf("=> 파일 없음\n");
+		return 0;
+	}
+	else{
+		for(;;count++){
+			fscanf(fp, "%s %d %d %d", p[count].name, &p[count].weight, &p[count].price, &p[count].rate_score);
+			if(feof(fp)) break;
+		}
+		for(int i=0;i<count;i++)
+			p[i].std_price=((p[i].price / p[i].weight)) *10;	
+	}
+	
 	
 	fclose(fp);
 	printf("=>파일 로딩됨!\n");
