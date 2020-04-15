@@ -116,5 +116,6 @@ int loadfile(PRODUCT* p){
 }
 
 void savefile(PRODUCT* p, int count){
-
+	FILE* fp;
+	fp=fopen("product.txt", "wt");
 }
