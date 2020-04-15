@@ -14,7 +14,7 @@ void listproduct(PRODUCT* p, int count){
 
 }
 
-int select_product_no(PRODUCT *p, int count){
+int select_product_no(PRODUCT *p, int count){	//데이터를 수정하고 삭제할 때 사용
 	int no;
 	listproduct(p, count);
 	printf("\n=>원하는 번호는? (취소: 0) ");
