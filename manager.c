@@ -118,4 +118,9 @@ int loadfile(PRODUCT* p){
 void savefile(PRODUCT* p, int count){
 	FILE* fp;
 	fp=fopen("product.txt", "wt");
+	for(int i=0;i<count;i++){
+	fprintf(fp, "%s %d %d %d\n", p[i].name, p[i].weight, p[i].price, p[i].rate_score);
+	}
+	fclose(fp);
+	printf("=> 저장됨!\n");
 }
