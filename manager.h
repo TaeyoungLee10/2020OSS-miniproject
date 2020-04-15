@@ -3,6 +3,10 @@
 //loadfile function added
 //savefile function added
 //search_product function added
+//search_product options:
+//(1) search by name
+//(2) search by price
+//(3) search by rate score
 #include <stdio.h>
 #include <string.h>
 #include "product.h"
