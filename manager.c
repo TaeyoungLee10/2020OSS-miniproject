@@ -33,6 +33,23 @@ void searchproduct (PRODUCT *p, int count){
 	
 	printf("=> 원하는 검색방법은? (취소: 0) ");
 	scanf("%d", &search_type);
+
+	if(search_type==1){
+	char searchname[20];	//검색할 이름
+	printf("검색할 상품명: ");
+	scanf("%s", searchname);
+	printf("\n*************제품 목록*************\n");
+	printf("번호 제품이름  중량  가격   표준가격    평점\n");
+	printf("==========================================\n");
+		for(i=0;i<count;i++){
+			if(strstr(p[i].name, searchname)){
+				printf("%3d ", i+1);
+				readproduct(p[i]);
+				search_check++;
+			}
+		}	
+
+	}
 }
 
 
