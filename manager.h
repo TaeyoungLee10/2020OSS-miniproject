@@ -1,3 +1,4 @@
+//21900585_이태영
 //mini_project
 //manager.h
 //loadfile function added
