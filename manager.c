@@ -114,3 +114,7 @@ int loadfile(PRODUCT* p){
 	printf("=>파일 로딩됨!\n");
 	return count;
 }
+
+void savefile(PRODUCT* p, int count){
+
+}
