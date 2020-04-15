@@ -66,6 +66,21 @@ void searchproduct (PRODUCT *p, int count){
 		}	
 
 	}
+	else if(search_type==3){
+	int searchrate;	//검색할 평점
+	printf("검색할 상품 평점: ");
+	scanf("%d", &searchrate);
+	printf("\n*************제품 목록*************\n");
+	printf("번호 제품이름  중량  가격   표준가격    평점\n");
+	printf("==========================================\n");
+		for(i=0;i<count;i++){
+			if(p[i].rate_score==searchrate){
+				printf("%3d ", i+1);
+				readproduct(p[i]);
+				search_check++;
+			}
+		}	
+	}
 }
 
 
