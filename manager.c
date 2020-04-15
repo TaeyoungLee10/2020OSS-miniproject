@@ -81,6 +81,13 @@ void searchproduct (PRODUCT *p, int count){
 			}
 		}	
 	}
+	else if(search_type==0){
+		printf("=> 취소됨!\n");
+		return;
+	}
+	
+	if(search_check==0)
+		printf("검색 결과 없음\n");
 }
 
 
