@@ -91,3 +91,12 @@ void searchproduct (PRODUCT *p, int count){
 }
 
 
+int loadfile(PRODUCT* p){
+	int count=0;
+	FILE *fp;
+	fp= fopen("product.txt", "rt");
+	
+	fclose(fp);
+	printf("=>파일 로딩됨!\n");
+	return count;
+}
