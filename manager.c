@@ -119,6 +119,7 @@ void savefile(PRODUCT* p, int count){
 	FILE* fp;
 	fp=fopen("product.txt", "wt");
 	for(int i=0;i<count;i++){
+	if(p[i].price==-1) continue;
 	fprintf(fp, "%s %d %d %d\n", p[i].name, p[i].weight, p[i].price, p[i].rate_score);
 	}
 	fclose(fp);
